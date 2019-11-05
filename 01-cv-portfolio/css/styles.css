@@ -107,15 +107,18 @@ b.max-bold{ font-weight: 700; }
 3. HEADER
 --------------------------------- */
 
-header{ position: absolute; top: 30px; left: 0; right: 0; z-index: 100; }
+navbar {}
 
-header .heading-wrapper{ border-radius: 5px; padding: 15px 10px 10px; background: #393e46; color: #fff; }
+header{ z-index: 100; }
 
+header .heading-wrapper{padding: 10px; background: #393e46; color: #fff;
+							overflow: hidden;}
+							
 header .info{ margin-bottom: 5px; }
 
-header .info .icon{ float: left; font-size: 15px; }
+header .info .icon{ float: right; font-size: 15px; color: #fff }
 
-header .info .right-area{ margin-left: 15px; }
+header .info .right-area{ margin-right: 15px; }
 
 header .downlad-btn{ padding: 15px 30px; border-radius: 4px; float: right; margin-top: 30px;
 	box-shadow: inset 0 0px 4px rgba(0,0,0,.3); background: #393e46; color: #fff; 
