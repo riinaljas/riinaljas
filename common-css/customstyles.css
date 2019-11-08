@@ -48,7 +48,7 @@ nav bar styles
 
 #hero-container-resume {
   width: 100%;
-  height: 220px;
+  height: 500px;
   background-color: #d1deec;
   overflow: hidden;
   position: relative;
@@ -506,7 +506,8 @@ a:hover .about-button {
 
 .data-thumbnail {
   overflow: hidden;
-	width:100%
+	width:100%;
+	height:80%;
 	
 }
 
