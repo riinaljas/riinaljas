@@ -1,0 +1,75 @@
+/* No CSS Reset with Bootstrap */
+/*These initial styles come from here: http://getbootstrap.com/examples/starter-template/starter-template.css*/
+
+body {
+  margin-top: 80px;
+  font-size: 20px;
+}
+
+.story {
+  margin-bottom: 30px;
+}
+
+#top-strip {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 40px;
+  background-color: #2d2d2d;
+  top: -80px;
+  padding: 10px;
+}
+
+#page-tag {
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: .9em;
+  font-weight: 400;
+  color: #e9e9e9 !important;
+  letter-spacing: .1em;
+  text-align: center;
+}
+
+#cake-map {
+  width: 100%;
+  margin: 25px 0px 25px 0px;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  line-height: 1.3em;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 10px;
+  max-width: 800px;
+}
+
+#byline {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin: 15px 0px 0px 0px;
+}
+
+#credit {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: .9em;
+  margin-bottom: 25px;
+}
+
+#footer {
+  background-color: #e9e9e9;
+  padding: 15px 0px 15px 0px;
+}
+
+#link {
+  font-family: 'Lato', sans-serif;
+  font-size: .8em;
+  text-align: center;
+}
+
+#footer a {
+  text-decoration: none;
+}

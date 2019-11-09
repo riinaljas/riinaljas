@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+
+div.tooltip {
+  color: black;
+  position: absolute;
+  text-align: left;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  font-family: sans-serif;
+  font: 12px sans-serif ;
+  background: #e5e5e5;
+  border: 1px solid #d3d3d3;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+</style>
+
+<body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+
+//SVG setup
+var margin = {top: 10, right: 30, bottom: 30, left: 30},
+      width = 600 - margin.left - margin.right,
+      height = 300 - margin.top - margin.bottom;
+
+var x = d3.scaleLinear()
+    .domain([1952, 2018])
+    .range([margin.left, width - margin.right]);
+
+var y = d3.scaleLinear()
+    .domain([0, 0.08])
+    .range([height - margin.bottom, margin.top]);
+
+//set up svg
+var svg = d3.select("body")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+            `translate(${margin.left}, ${margin.top})`);
+
+// x axis
+svg.append("g")
+    .attr("class", "axis axis--x")
+    .attr("transform", "translate(0," + (height - margin.bottom) + ")")
+    .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+
+//svg.append("g")
+    //.attr("class", "axis axis--y")
+    //.attr("transform", "translate(" + margin.left + ",0)")
+    //.call(d3.axisLeft(y).ticks(null, "%"));
+
+var dataFile = "allcars.csv"
+
+//number of bins for histogram
+var nbins = 67;
+
+d3.csv(dataFile, function(data) {
+  data.forEach(function(d) {
+      d.Year = +d.Year
+      d.MakeModel = d.MakeModel
+      d.Reason = d.Reason;
+  });
+
+  //histogram binning
+  var histogram = d3.histogram()
+    .domain(x.domain())
+    .thresholds(x.ticks(nbins))
+    .value(function(d) { return d.Year;} );
+
+  //binning data and filtering out empty bins
+  var bins = histogram(data).filter(d => d.length>0)
+
+  svg.insert("g", "*")
+      .attr("fill", "#8a89a6")
+    .selectAll("rect")
+    .data(bins)
+    .enter().append("rect")
+      .attr("x", function(d) { return x(d.x0) + 1; })
+      .attr("y", function(d) { return y(d.length / data.length) - 2; })
+      .attr("width", function(d) { return x(d.x1) - x(d.x0) - 1; })
+      .attr("height", function(d) { return y(0) - y(d.length / data.length); });
+
+});
+
+// thanks to this block for help: https://bl.ocks.org/mbostock/4341954
+
+</script>
+</body>
+</html>

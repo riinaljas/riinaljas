@@ -1,0 +1,472 @@
+<!--This is a basic template for bootstrap, which links to the bootstrap stylesheet I modified it from this  http://getbootstrap.com/examples/starter-template/# -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Our Favorite Movies</title>
+
+    <!--my Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Montserrat:400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Bootstrap core CSS, which has been minified for faster load.  You can USE the styles in this stylesheet, but NEVER EDIT THIS FILE-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--Put all of your custom styles in here.  Notice it comes below the core boostrap.min.css (core files). The order is important-->
+     <link href="css/customstyles.css" rel="stylesheet">
+
+    <!-- These are special files that make all the fancy new stuff work in older versions of Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top"><!--beginning of navbar-->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Our Favorite Movies</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Top</a></li>
+            <li><a href="#one">1</a></li><!--links here go to divs on this page-->
+            <li><a href="#two">2</a></li>
+            <li><a href="#three">3</a></li>
+            <li><a href="#four">4</a></li>
+            <li><a href="#five">5</a></li>
+            <li><a href="#six">6</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav><!--end of navbar-->
+
+    <!--page top-->
+    <div class="row" id="page-top">
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div id="page-title">A Visual Look at Our Favorite Movies</div>
+        <div id="page-byline">By Lindsay Huth</div>
+        <div id="page-description">There are movies we think are good and movies we all pay to go see. These movies are not always the same. This is a visual look at our favorite movies, using IMDb ratings and data of box office ticket sales (adjusted for inflation) from Box Office Mojo.</div>
+      </div>
+    </div>
+
+    <div class="container"> <!--beginning of main body section of document -->
+      <!--chart block one-->
+      <div class="row graphic-element" id="one">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="graphic-title">Blockbusters Across the Decades</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">Each decade brought us great films that we paid big bucks to see. From "The Four Horsemen of the Apocalypse" in 1921 to "Star Wars: The Force Awakens" in 2016, here are the highest grossing movies for each decade.</div>
+          <div class="graphic-content">
+            <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=16GeKvP_O6hhSKznTJNQK_f7JgA_CiJe5JJeCvYPorkE&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!--chart block two-->
+      <div class="row graphic-element" id="two">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="graphic-title">Where Film Buffs Reside</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">It's not just Americans who love their movies. Here are the top 20 foreign countries for box office spending in 2016. Australia paid the most per 1,000 people &mdash; $37,297.97 &mdash; to see movies last year, followed by South Korea and the United Kingdom.</div>
+          <div class="graphic-content">
+            <iframe width="100%" height="500" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col4%3E%3E1+from+1kk35vzNHAAbhP77LWUXzUfOQLy8zogmjZCljbEwn&amp;viz=MAP&amp;h=false&amp;lat=38.46514705238976&amp;lng=22.5&amp;t=1&amp;z=2&amp;l=col4%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
+            <div class="legend">
+              <h4>2016 Ticket Sales per 1,000 People</h4>
+              <div class="legend-name bucket-1">$32,001 - $44,000</div>
+              <div class="legend-name bucket-2">$24,001 - $32,000</div>
+              <div class="legend-name bucket-3">$16,001 - $24,000</div>
+              <div class="legend-name bucket-4">$8,001 - $16,000</div>
+              <div class="legend-name bucket-5">$0.01 - $8,000</div>
+              <div class="legend-name bucket-6">Not a Top Movie Market</div>
+            </div>
+            <div id="source">
+              Source: <a href="https://www.imdb.com/chart/top">IMDB Top 250 Movies</a> and <a href="http://www.boxofficemojo.com/alltime/adjusted.htm">Box Office Mojo Top Adjusted Gross Income Films</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--chart block three-->
+      <div class="row graphic-element" id="three">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="graphic-title">Are Movies Getting Better?</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">Generally speaking, the more recent the decade, the more movies it has represented in the IMDb top 250. The 2000s claim the crown for now, but the 2010s aren't over yet. Movies could be getting better &mdash; or maybe we're just not as hard on them as we used to be.</div>
+          <div class="graphic-content">
+            <div id="chart-three"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--chart block four-->
+      <div class="row graphic-element" id="four">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="graphic-title">The Directors We Love</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">21 directors are responsible for the 40 movies that are both in the IMDb Top 250 and the Box Office Mojo Top 200 Adjusted Gross Income Films. Of those directors, eight have more than one on the list. Disney/Pixar (whose movies are grouped together) tops the charts, followed by Steven Spielberg.</div>
+          <div class="graphic-content">
+            <div id="chart-four"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--chart block five-->
+      <div class="row graphic-element" id="five">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="graphic-title">The Original "Star Wars" Are Out of This World</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">All eight "Star Wars" films made the Box Office Mojo Top 200 Adjusted Gross Income Films list &mdash; but that doesn't mean we loved them all. The prequels had some of the lowest ticket sales and ratings, while the new generation looks promising. But the original trilogy ranks highest on both measures &mdash; and "A New Hope" is in its own galaxy.</div>
+          <div class="graphic-content">
+            <div id="chart-five"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--chart block six-->
+      <div class="row graphic-element" id="six">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="graphic-title">The Superpower Studios</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">Just five studios are responsible for 136 of the top 200 highest grossing films of all time. Buena Vista's total leads the pack at 35, but almost all of its films were made in the last 25 years. The other studios, by contrast, spread their blockbusters out over the last 75 years.</div>
+          <div class="graphic-content">
+            <div id="chart-six"></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <!--footer-->
+    <div id="footer">
+
+      <div class="row container">
+        <div class="col-sm-6 col-sm-offset-3" id="copyright">Copyright &copy; 2017 Lindsay Huth</div>
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--All of these links below make interactivity, which we'll add later, work. This-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!--This is the core boostrap javascript file this is the original, but we need to correct the path-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!--highcharts js link-->
+    <script src="chart/Highcharts-5.0.13/code/highcharts.js"></script>
+
+    <!--chart in block 3: movies getting better-->
+    <script>
+      Highcharts.chart('chart-three', {
+          chart: {
+              type: 'line',
+              height: 500,
+              spacing: [25, 25, 25, 25],
+              style: {
+                fontFamily: 'Montserrat',
+            }
+          },
+          title: {
+              text: 'IMDb Top 250 Movies by Decade'
+          },
+          subtitle: {
+              text: 'Source: <a href="https://www.imdb.com/chart/top">IMDB Top 250 Movies</a>'
+          },
+          credits: {
+              enabled: false,
+          },
+          xAxis: {
+              title: {
+                  text: 'Decade'
+              },
+              categories: ['1920s', '1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s']
+          },
+          yAxis: {
+              title: {
+                  text: 'Number of Movies'
+              }
+          },
+          tooltip: {
+              formatter: function () {
+                return 'There were <b>' + this.y + '</b> movies in the IMDb top 250 in the <b>' + this.x + '</b>';
+              }
+          },
+          series: [{
+              name: 'Number of IMDb Top 250 Movies',
+              color: '#917e51',
+              dataLabels: {enabled: true},
+              data: [
+                { y: 6, name: '6'},
+                { y: 7, name: '7'},
+                { y: 12, name: '12'},
+                { y: 25, name: '25'},
+                { y: 18, name: '18'},
+                { y: 21, name: '21'},
+                { y: 28, name: '28'},
+                { y: 42, name: '42'},
+                { y: 53, name: '53'},
+                { y: 38, name: '38'}]
+          }, {
+              name: 'Median Number for All Decades',
+              color: '#191c26',
+              dataLabels: {enabled: false},
+              enableMouseTracking: false,
+              data: [23, 23, 23, 23, 23, 23, 23, 23, 23, 23]
+          }]
+      });
+      </script>
+
+      <!--chart in block four: best directors-->
+      <script>
+        Highcharts.chart('chart-four', {
+        chart: {
+            type: 'column',
+            height: 500,
+            spacing: [25, 25, 25, 25],
+            style: {
+              fontFamily: 'Montserrat',
+          }
+        },
+        title: {
+            text: 'Directors with Multiple Movies in IMDb Top 250 and Box Office Mojo Top Adjusted Gross of All Time'
+        },
+        subtitle: {
+            text: 'Source: <a href="https://www.imdb.com/chart/top">IMDB Top 250 Movies</a> and <a href="http://www.boxofficemojo.com/alltime/adjusted.htm">Box Office Mojo Top Adjusted Gross Income Films</a>'
+        },
+        credits: {
+            enabled: false
+        },
+        xAxis: {
+            categories: ['Disney/Pixar', 'Steven Spielberg', 'George Lucas', 'Peter Jackson', 'Robert Zemeckis', 'George Roy Hill', 'Alfred Hitchcock', 'Christopher Nolan'],
+            crosshair: true,
+            title: {
+              text: 'Director'
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Number of Movies'
+            }
+        },
+        tooltip: {
+            formatter: function () {
+              return '<b>' + this.x + '</b> had <b>' + this.y + '</b> movies on the IMDB Top 250 and Box Office Mojo Top 200 Adjusted Grossing Movies';
+            }
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            showInLegend: false,
+            color: '#917e51',
+            data: [
+            ['Disney/Pixar', 8],
+            ['Steven Spielberg', 5],
+            ['George Lucas', 3],
+            ['Peter Jackson', 3],
+            ['Robert Zemeckis', 2],
+            ['George Roy Hill', 2],
+            ['Alfred Hitchcock', 2],
+            ['Christopher Nolan', 2],],
+            dataLabels: {
+              enabled: true,
+                  format: '{point.y}', // one decimal
+                  style: {
+                      fontSize: '10px',
+                      fontFamily: 'Montserrat'
+                }
+            }
+        }]
+    });
+    </script>
+
+    <!--chart in block five: star wars-->
+    <script>
+      Highcharts.chart('chart-five', {
+      chart: {
+          type: 'scatter',
+          zoomType: 'xy',
+          height: 500,
+          spacing: [25, 25, 25, 25],
+          style: {
+            fontFamily: 'Montserrat',
+        }
+      },
+      title: {
+          text: 'Gross Income Versus IMDb Rating of Star Wars Movies'
+      },
+      subtitle: {
+          text: 'Source: <a href="https://www.imdb.com/chart/top">IMDB Top 250 Movies</a> and <a href="http://www.boxofficemojo.com/alltime/adjusted.htm">Box Office Mojo Top Adjusted Gross Income Films</a>'
+      },
+      credits: {
+          enabled: false
+      },
+      xAxis: {
+          title: {
+              enabled: true,
+              text: 'Gross Adjusted Income'
+          },
+          startOnTick: true,
+          endOnTick: true,
+          showLastLabel: true
+      },
+      yAxis: {
+          title: {
+              text: 'IMDb Rating'
+          }
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'left',
+          verticalAlign: 'top',
+          x: 70,
+          y: 50,
+          floating: true,
+          backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+          borderWidth: 1
+      },
+      plotOptions: {
+          scatter: {
+              marker: {
+                  radius: 6,
+                  states: {
+                      hover: {
+                          enabled: true,
+                          lineColor: 'rgb(100,100,100)'
+                      }
+                  }
+              },
+              states: {
+                  hover: {
+                      marker: {
+                          enabled: false
+                      }
+                  }
+              },
+          }
+      },
+      tooltip: {
+            headerFormat: '<b>Movie Title: </b>{point.key}<br>',
+            pointFormat: '<b>IMDb Rating: </b>{point.y}<br> <b>Gross Income</b> (2017 dollars): ${point.x}'
+      },
+      series: [{
+          name: 'Original Trilogy',
+          color: '#917e51',
+          data: [
+            { x: 1583483200, y: 8.6, name: 'A New Hope', dataLabels: { enabled: true, format: 'A New Hope'}},
+            { x: 872825900, y: 8.7, name: 'The Empire Strikes Back', dataLabels: { enabled: true, format: 'The Empire Strikes Back'}},
+            { x: 836188200, y: 8.3, name: 'Return of the Jedi', dataLabels: { enabled: true, format: 'Return of the Jedi'}}]
+      }, {
+          name: 'Prequels',
+          color: '#191c26',
+          data: [{ x: 802874300, y: 6.5, name: 'The Phantom Menace', dataLabels: { enabled: true, format: 'The Phantom Menace'}},
+          { x: 475334700, y: 6.6, name: 'Attack of the Clones', dataLabels: { enabled: true, format: 'Attack of the Clones'}},
+          { x: 527395500, y: 7.6, name: 'Revenge of the Sith', dataLabels: { enabled: true, format: 'Revenge of the Sith'}}]
+      }, {
+        name: 'New Generation',
+        color: '#7c8ca5',
+        data: [{ x: 961143200, y: 8, name: 'The Force Awakens', dataLabels: { enabled: true, format: 'The Force Awakens'}},
+        { x: 537326000, y: 7.9, name: 'Rogue One', dataLabels: { enabled: true, format: 'Rogue One'}}]
+      }]
+  });
+  </script>
+
+  <!--chart in block six: movies by studio-->
+  <script>
+  Highcharts.chart('chart-six', {
+      chart: {
+          type: 'column',
+          height: 500,
+          spacing: [25, 25, 25, 25],
+          style: {
+            fontFamily: 'Montserrat',
+        }
+      },
+      title: {
+          text: 'Movies Studios with More than 20 Films in Box Office Mojo Top 200 Adjusted Gross of All Time'
+      },
+      subtitle: {
+          text: 'Source: <a href="http://www.boxofficemojo.com/alltime/adjusted.htm">Box Office Mojo Top Adjusted Gross Income Films</a>'
+      },
+      credits: {
+          enabled: false
+      },
+      xAxis: {
+        title: {
+            text: 'Movie Studios'
+        },
+          categories: ['Universal Studios', '20th Century Fox', 'Paramount Pictures', 'Warner Bros.', 'Buena Vista']
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Number of Films on Highest-Grossing List'
+          },
+          stackLabels: {
+              enabled: true,
+              style: {
+                  fontWeight: 'bold',
+                  color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+              }
+          }
+      },
+      legend: {
+          align: 'left',
+          x: 60,
+          verticalAlign: 'top',
+          y: 90,
+          floating: true,
+          backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+          borderColor: '#CCC',
+          borderWidth: 1,
+          shadow: false
+      },
+      tooltip: {
+          headerFormat: '<b>Movies from {point.x}</b><br/>',
+          pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+      },
+      plotOptions: {
+          column: {
+              stacking: 'normal',
+              dataLabels: {
+                  enabled: true,
+                  color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+              }
+          }
+      },
+      series: [{
+          name: '1992-2017',
+          color: '#917e51',
+          data: [12, 9, 8, 18, 31]
+      }, {
+          name: '1967-1991',
+          color: '#191c26',
+          data: [10, 12, 14, 8, 4]
+      }, {
+          name: '1941-1966',
+          color: '#7c8ca5',
+          data: [1, 3, 3, 3, 0]
+      }]
+  });
+  </script>
+
+  </body>
+</html>

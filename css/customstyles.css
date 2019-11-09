@@ -1,0 +1,722 @@
+/* No CSS Reset with Bootstrap */
+/*These initial styles come from here: http://getbootstrap.com/examples/starter-template/starter-template.css*/
+
+body {
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+
+div {
+  /*border: 1px solid #ccc;*/
+}
+
+nav bar styles
+
+.navbar {
+  padding: 10px; background: #393e46; color: #fff;
+							overflow: hidden;
+}
+
+.navbar-brand {
+  padding: 10px; background: #393e46; color: #fff;
+							overflow: hidden;;
+}
+
+.navbar-collapse {
+  position: relative;
+  float: right;
+}
+
+.navbar-nav {
+  fpadding: 10px; background: #393e46; color: #fff;
+							overflow: hidden;}
+
+/*hero styles*/
+#hero-container {
+  width: 100%;
+  height: 700px;
+
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+#hero-container-resume {
+  width: 100%;
+  height: 280px;
+  background-color: #9f9eba;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+#hero-icons {
+  margin-top: 15px;
+}
+
+.icon {
+  margin-right: 12px;
+  color: #29274c;
+}
+
+a:hover .icon {
+  color: #000000;
+}
+
+/*hero text*/
+#hero-row {
+  position: absolute;
+  z-index: 2;
+  top: 150px;
+}
+
+#hero-row-resume {
+  position: absolute;
+  z-index: 2;
+  top: 120px;
+}
+
+#hero-col {
+  max-width: 1000px;
+}
+
+#portrait {
+  width: 100%;
+  margin: auto;
+}
+
+#hero-name {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #29274c;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#hero-title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.2em;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+
+#hero-name-resume {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #29274c;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#hero-text {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  color: #FFF;
+  line-height: 2em;
+}
+
+/*limiting all content to 1000px*/
+.container {
+  max-width: 1000px;
+}
+
+/*white container for resume content*/
+#resume {
+  background-color: #FFF;
+  position: relative;
+  z-index: 1;
+  margin: 0px auto 0px auto;
+  top: -50px;
+  padding: 10px 30px 10px 30px;
+}
+
+/*margins below all content sections*/
+#experience, #education, #skills, #honors {
+  margin-bottom: 30px;
+}
+
+/*borders for section dividers (education and skills turned on in media queries)*/
+#experience {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#honors {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 15px;
+}
+
+/*top of each section*/
+.section-header {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  color: #2f2f3d;
+  margin: 25px 0px 15px 0px;
+}
+
+.dash {
+  width: 15px;
+  height: 3px;
+  background-color: #29274c;
+  margin: 5px 0px 20px 15px;
+}
+
+/*styles for job, school and skill containers*/
+.job, .school, .skill {
+  padding: 0px 0px 20px 0px;
+}
+
+/*job styles*/
+.job {
+  /*border-bottom: 1px solid #d6d6d6;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.job-title {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.job-company {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.job-years-large, .job-years-small {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
+.job-years-large p {
+  position: relative;
+  float: right;
+}
+/*all body copy grouped here*/
+.job-text, .school-text, .skill-text {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #5b5b5b;
+  line-height: 1.4em;
+}
+
+.job-company, .job-years-large, .job-years-small, .job-text, .school-degree, .school-text {
+  margin-bottom: 10px;
+}
+
+/*school styles*/
+.school-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.school-degree {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+/*skill styles*/
+.skill-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: .9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*honor styles*/
+#honor-list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#honor-list li {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #5b5b5b;
+  display: inline;
+  margin-right: 10px;
+  line-height: 1.8em;
+}
+
+/*leadership styles*/
+#leader-list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#leader-list li {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  color: #5b5b5b;
+  margin-right: 10px;
+  line-height: 1.8em;
+}
+
+/*share styles*/
+#share {
+  margin-bottom: 40px;
+}
+
+#share-title {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  font-style: italic;
+  text-transform: none;
+}
+
+#share-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  color: #5b5b5b;
+}
+
+#share-list li {
+  display: inline;
+  margin-left: 15px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: .9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#share-list a:link, #share-list a:visited {
+  color: #9f9eba;
+  text-decoration: none;
+}
+
+#share-list a:hover {
+  color: #8280a3;
+  text-decoration: none;
+}
+
+/*activities styles*/
+#activities {
+  width: 100%;
+  background-color: #29274c;
+  padding: 50px 0 50px 0;
+}
+
+#activities-row {
+  margin: auto;
+}
+
+#activities-tag {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #9f9eba;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.activity-name {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1em;
+  color: #a5a4b2;
+  margin-bottom: 10px;
+}
+
+.activity-text a {
+  text-decoration: none;
+}
+
+.activity-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: #dddddd;
+}
+
+a:hover .title {
+  color: #FFF;
+}
+
+.author {
+  color: #9e9daa;
+}
+
+a:hover .author {
+  color: #b5b4c1;
+}
+
+
+/*footer styles*/
+#footer {
+  background-color: #393e46;;
+  padding: 10px 0 10px 0;
+}
+
+#footer .row {
+  margin: auto;
+}
+
+#copyright, #built {
+  font-weight: 400;
+  color: #fff;
+}
+
+#copyright {
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 1px;
+}
+
+#built {
+  text-align: right;
+  font-size: .8em;
+}
+
+/**new about page styles**/
+.bio {
+  font-family: 'Merriweather', serif;
+  font-size: 1em;
+  padding: 65px;
+  line-height: 1.8em;
+}
+
+.bio a {
+  text-decoration: none;
+  color: #78778e;
+}
+
+#bio-tag {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  color: #9f9eba;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#about-content {
+  background-color: #FFF;
+  position: relative;
+  z-index: 1;
+  margin: 0px auto 0px auto;
+  top: -50px;
+  padding: 0px 15px 0px 15px;
+}
+
+.button {
+  padding: 0px;
+}
+
+.button a {
+  text-decoration: none;
+}
+
+.about-button {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  color: #e9e9e9;
+  background-color: #9f9eba;
+  border: 1px solid #29274c;
+  height: 45px;
+  padding-top: 5px;
+}
+
+a:hover .about-button {
+  background-color: #4b4a63;
+}
+
+/**new resume styles**/
+#resume-name {
+  font-family: 'Merriweather', serif;
+  padding: 25px 0px 25px 0px;
+  margin: 10px 0px 20px 0px;
+  border-bottom: 2px solid #e9e9e9;
+  text-align: center;
+}
+
+#my-name {
+  font-size: 2em;
+}
+
+/**new portfolio styles**/
+
+#cat-tag {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  color: #9f9eba;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 30px 0px 30px 0px;
+}
+
+.portfolio-block {
+  padding: 35px 15px 0px 15px;
+}
+
+.portfolio-block .col-sm-6 {
+  margin-bottom: 20px;
+}
+
+.portfolio-item {
+  border-top: 1px solid #e9e9e9;
+  position: relative;
+}
+
+.portfolio-box {
+  border: 1px solid #e9e9e9;
+  border-radius: 3px;
+  position: relative;
+  padding: 0px;
+}
+
+.portfolio-item a, .portfolio-box a {
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+.data-thumbnail {
+  overflow: hidden;
+}
+
+.data-thumbnail img {
+  width: 100%;
+}
+
+.portfolio-description {
+  padding: 25px;
+}
+
+.portfolio-date {
+  font-family: 'Merriweather', serif;
+  font-size: .8em;
+  color: #828282;
+  letter-spacing: 1px;
+  border-radius: 3px;
+}
+
+.portfolio-paper {
+  font-family: 'Lato';
+  text-align: center;
+  background-color: #e9e9e9;
+  height: 40px;
+  padding-top: 8px;
+  color: #828282;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.progress-head {
+  padding: 10px 0px 10px 25px;
+  background-color: #e9e9e9;
+}
+
+.portfolio-headline {
+  font-family: 'Merriweather', serif;
+  font-size: 1.15em;
+  /*font-weight: 700;*/
+  /*color: #29274c;*/
+}
+
+.portfolio-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: #5b5b5b;
+  line-height: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.portfolio-explanation {
+  font-family: 'Lato', sans-serif;
+  font-size: .95em;
+  padding: 0px 0px 25px 30px;
+  color: #5b5b5b;
+  line-height: 1.5em;
+}
+
+.portfolio-tools {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  font-style: italic;
+  color: #5b5b5b;
+  line-height: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.my-take {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.bonus-tag {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.bonus-box {
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 20px 15px 15px 15px;
+  margin-bottom: 20px;
+}
+
+.bonus-text {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.bonus-text a {
+  color: #a5a5a5;
+}
+
+#last {
+  margin-bottom: 40px;
+}
+
+/*media queries*/
+/*allowing job years to move at 992px*/
+@media only screen and (max-width: 991px) {
+  .job-years-large {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .job-years-small {
+    display: none;
+  }
+}
+
+/*regular media queries:
+- adjusting the hero container and content,
+- adding line below education when stacked
+- aligning footer text at xs  */
+
+@media only screen and (min-width: 1200px) {
+  #hero-container img {
+    width: 86%;
+    max-width: 1200px;
+    margin-left: 7%;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+
+  #hero-container img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  #hero-container {
+  }
+  #hero-container img {
+    width: 80%;
+  }
+  #portrait {
+    width: 30%;
+    margin-left: 35%;
+  }
+  #hero-row {
+    top: 125px;
+  }
+  #hero-col {
+    text-align: center;
+  }
+  #hero-name {
+    font-size: 1.3em;
+    margin-top: 20px;
+  }
+  #hero-title {
+    font-size: 1.6em;
+  }
+  #hero-text {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #hero-container {
+    height: 300px;
+  }
+  #hero-container img {
+    display: none;
+  }
+  #hero-container-resume {
+    height: 230px;
+  }
+  #hero-row {
+    top: 50px;
+  }
+  #hero-row-resume {
+    top: 70px;
+  }
+  #portrait {
+    display: none;
+  }
+  #hero-name {
+    font-size: 1.2em;
+  }
+  #hero-title {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+  }
+  #hero-text {
+    display: none;
+  }
+  .activity-name {
+    margin-top: 30px;
+  }
+  #built {
+    text-align: left;
+  }
+  #education {
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .bio {
+    padding: 35px;
+  }
+  #share-list li {
+    display: block;
+    margin-top: 15px;
+  }
+  .share-slash {
+    display: none !IMPORTANT;
+  }
+  .portfolio-explanation {
+    padding-left: 0px;
+  }
+}

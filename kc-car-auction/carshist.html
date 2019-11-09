@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.enter {
+  fill: #EDCA3A;
+}
+
+.update {
+  fill: #1FBAD6;
+}
+
+.exit {
+  fill: #F25754;
+}
+
+.selected {
+  fill: #E6B0F1;
+}
+
+div.tooltip {
+  color: black;
+  position: absolute;
+  text-align: left;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  font-family: sans-serif;
+  font: 12px sans-serif ;
+  background: #e5e5e5;
+  border: 1px solid #d3d3d3;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+</style>
+
+
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+//SVG setup
+var margin = {top: 10, right: 30, bottom: 30, left: 30},
+      width = 200 - margin.left - margin.right,
+      height = 900 - margin.top - margin.bottom;
+
+//scales
+var x = d3.scaleLinear()
+    .rangeRound([0, width])
+    .domain([1952, 2018]);
+
+var y = d3.scaleLinear()
+    .domain([0, 0.1])
+    .range([height - margin.bottom, margin.top]);
+
+//set up svg
+var svg = d3.select("body")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+            `translate(${margin.left}, ${margin.top})`);
+
+//tooltip
+var tooltip = d3.select("body")
+  .append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+var dataFile = "allcars.csv"
+
+//number of bins for histogram
+var nbins = 67;
+
+function update(){
+  // Get the data
+  d3.csv(dataFile, function(data) {
+    data.forEach(function(d) {
+        d.Year = +d.Year
+        d.MakeModel = d.MakeModel
+        d.Reason = d.Reason;
+    });
+
+    //histogram binning
+    var histogram = d3.histogram()
+      .domain(x.domain())
+      .thresholds(x.ticks(nbins))
+      .value(function(d) { return d.Year;} );
+
+    //binning data and filtering out empty bins
+    var bins = histogram(data).filter(d => d.length>0)
+
+    //g container for each bin
+    let binContainer = svg.selectAll(".gBin")
+      .data(bins);
+
+    binContainer.exit().remove()
+
+    let binContainerEnter = binContainer.enter()
+      .append("g")
+        .attr("class", "gBin")
+        .attr("transform", d => `translate(${x(d.x0)}, ${height})`)
+
+    //need to populate the bin containers with data the first time
+    binContainerEnter.selectAll("circle")
+        .data(d => d.map((p, i) => {
+          return {idx: i,
+                  name: p.MakeModel,
+                  year: p.Year,
+                  reason: p.Luxury,
+                  radius: 1
+                }
+        }))
+      .enter()
+      .append("circle")
+        .attr("class", "enter")
+        .attr("cx", 0) //g element already at correct x pos
+        .attr("cy", function(d) {
+            return - d.idx * 2 * d.radius - d.radius - 3; })
+        .attr("r", 0)
+        .on("mouseover", tooltipOn)
+        .on("mouseout", tooltipOff)
+        .transition()
+          .duration(500)
+          .attr("r", function(d) {
+          return (d.length==0) ? 0 : d.radius; })
+        .style("fill", "#8a89a6");
+
+    binContainerEnter.merge(binContainer)
+        .attr("transform", d => `translate(${x(d.x0)}, ${height})`)
+
+    svg.append("path")
+      .datum(dataFile)
+      .attr("fill", "none")
+      .attr("stroke", "#000")
+      .attr("stroke-width", 1.5)
+      .attr("stroke-linejoin", "round")
+      .attr("d",  d3.line()
+          .curve(d3.curveBasis)
+          .x(function(d) { return x(d[0]); })
+          .y(function(d) { return y(d[1]); }));
+
+  });//d3.csv
+};//update
+
+function tooltipOn(d) {
+  //x position of parent g element
+  let gParent = d3.select(this.parentElement)
+  let translateValue = gParent.attr("transform")
+
+  let gX = translateValue.split(",")[0].split("(")[1]
+  let gY = height + (+d3.select(this).attr("cy")-25)
+
+  d3.select(this)
+    .classed("selected", true)
+  tooltip.transition()
+       .duration(200)
+       .style("opacity", 1);
+  tooltip.html(d.year + " " + d.name)
+    .style("left", gX + "px")
+    .style("top", gY + "px");
+}//tooltipOn
+
+function tooltipOff(d) {
+  d3.select(this)
+      .classed("selected", false);
+    tooltip.transition()
+         .duration(500)
+         .style("opacity", 0);
+}//tooltipOff
+
+// add x axis
+svg.append("g")
+  .attr("class", "axis axis--x")
+  .attr("transform", "translate(0," + height + ")")
+  .call(d3.axisBottom(x)
+    .tickFormat(d3.format("d"))
+    .tickValues(x.domain()));
+
+
+//draw everything
+update();
+
+</script>
+
+<!--thanks to this bl.ock for the help starting out: https://bl.ocks.org/gcalmettes/95e3553da26ec90fd0a2890a678f3f69-->
+
+</body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+<style>
+
+div.tooltip {
+  color: black;
+  position: absolute;
+  text-align: left;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  font-family: 'Open Sans';
+  font: 16px;
+  font-weight: 700;
+  border-radius: 2px;
+  pointer-events: none;
+  color: #f4aa42;
+}
+
+#sub, #tag {
+  position: absolute;
+  z-index: 1;
+  left: 90px;
+  width: 400px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#chart {
+  min-width: 675px;
+  max-width: 1000px;
+  margin-left: 50px;
+}
+
+#story-head {
+  min-width: 675px;
+  max-width: 800px;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: 'Open Sans';
+  font-size: 28px;
+}
+
+#byline {
+  min-width: 675px;
+  max-width: 800px;
+  margin-top: 10px;
+  margin-left: 50px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+#story {
+  min-width: 675px;
+  max-width: 800px;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: 'Open Sans';
+  font-size: 18px;
+}
+
+#story p {
+  margin-bottom: 25px;
+}
+
+#tag {
+  top: 44px;
+  color: #707070;
+}
+
+#sub {
+  top: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #707070;
+}
+
+#line {
+  width: 250px;
+  height: 1px;
+  background-color: #f4aa42;
+  top: 85px;
+  left: 185px;
+  position: absolute;
+}
+
+#source {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .7em;
+  margin-left: 50px;
+}
+
+</style>
+
+<body>
+  <div id="chart">
+    <p id="sub">Roll over the squares to explore the cars and why they were towed.</p>
+    <p id="tag">This car is a</p>
+    <div id="line"></div>
+  </div>
+  <div id="source">Source: Kansas City Tow Services (Lindsay Huth | Flatland)</div>
+
+  <div id="story-head">Abandoned Or Wrecked: The Numbers Behind The City’s Car Auction</div>
+  <div id="byline">By Lindsay Huth and Michelle Stoddart for Flatland</div>
+
+  <div id="story">
+    <p>John Baccala stood in a parking lot in the Northeast Industrial District of Kansas City, Missouri, and raised his voice over the auctioneer’s bid calling.</p>
+
+    <p>“Every one of these cars has a story,” said Baccala, the communication/community liaison for the city’s Neighborhoods and Housing Services Department.</p>
+
+    <p>Baccala has seen more than 5,200 cars pass through the Kansas City Tow Lot, the city’s impound lot, this year alone. They were abandoned, hit or stolen before the city picked them up. The owners of the cars are notified, but if the vehicles are not retrieved, they become available to the public for live bidding the third Tuesday of each month, including the one scheduled for today.</p>
+
+    <p>The third Tuesday in July the vehicles ready for auction sat in the city’s impound lot with shattered windshields and dangling bumpers, while bidders vied to claim them for the best price.</p>
+
+    <p>Patricia Nolan, 24, a first-time bidder at the July auction, had her sights set on a black 2011 Kia Sorento, which she saw in a listing online. After researching the vehicle, the Kansas Citian arrived at the auction in hopes that she would place the winning bid.</p>
+
+    <p>The Kia has a long history, which started when it was manufactured in Georgia. It was sold for just under $20,000 and spent most of its life in Arizona, accruing more than 125,000 miles as of last year. But it wound up in Kansas City, and after it was stolen, it landed in the KC impound lot with more than 400 other cars to be auctioned. </p>
+
+    <p>The Kia that Nolan wanted was newer than most of the cars the Tow Lot has seen this year. Most were from the early 2000s.</p>
+
+    <p>Overall, the date range was large: The oldest car auctioned off was from 1952, although the city’s data doesn’t list its make or model. And the past year’s auctions included four vehicles from 2018: two Ford F-150s, a Volkswagen Jetta and a trailer.</p>
+
+    <p>Ford was the most common make auctioned off last year, and the top model was the Taurus. Honda Accords, Chevrolet Impalas and Ford Explorers also frequently appeared.</p>
+
+    <p>Other cars were rarer. Some were from traditional luxury brands, like the 1983 Porsche 944 and a pair of 2004 Cadillac Escalades.</p>
+
+    <p>And Tow Lot auctions aren’t just for cars: Last year, five Harley-Davidsons, four motor homes, a boat and a Vespa were auctioned off.</p>
+
+    <p>In the last year, more than a third of the cars arrived at the Tow Lot because they were involved in an accident, and a quarter were abandoned. Abandoned cars tend to be older than ones in accidents.</p>
+
+    <p>A substantial number of cars also ended up in the auction because their owners were arrested or the vehicles were illegally parked or stolen.</p>
+
+    <p>Baccala said the city wants the owners to retrieve their cars, but if that doesn’t happen, the vehicles go to auction.</p>
+
+    <p>The Tow Lot notifies the owner that his or her car is in the lot. The owner then has 30 days to collect the car. In order to do that, the owner must pay the cost of towing, which starts at $265, and the cost of storage for each day, which starts at $30 per day. There is a discount on those fees for stolen vehicles.</p>
+
+    <p>“What usually happens is they get in an accident, they settle with the insurance company, the insurance company doesn’t want it, the people who had the car don’t want it,” Baccala said. “So we end up with it.”</p>
+
+    <p>Baccala said that the car auction works out well for the city. Last year the auctions made around $5 million, which helps the Tow Lot stay self-sufficient, he said.</p>
+
+    <p>“It all goes back into the Tow Lot,” Baccala said. “[That] keeps us from having to dip into city coffers to get money if we’re running behind one month or something like that.”</p>
+
+    <p>The Tow Lot draws a regular crowd. Baccala said that every month they see “regulars” from salvage companies and “pick-and-pull” businesses. He said many of them bid on cars in bad condition for scrap metal or parts.</p>
+
+    <p>Most cars arrive in poor condition, and the city’s data show that the engines started in just 5 percent of the cars auctioned off last year. Nearly all of the cars with working engines had been stolen.</p>
+
+    <p>Those cars with working engines or that need fewer repairs are considered “premium” vehicles and usually draw higher bids at auction, Baccala said. The Tow Lot auctioned off an average of 15 premium cars per month in the last year.</p>
+
+    <p>The Kia that Patricia Nolan had her eye on was one of the “premium” cars in July. She bid on the car but stopped when the price exceeded her range. The vehicle eventually sold for $1,700, she said.</p>
+
+    <p>Nolan was like many other visitors to the monthly auction — interested in a vehicle and hoping for a great price.</p>
+
+    <p>“We see families out here looking for a second car, fathers and mothers looking for their first car for their kids,” Baccala said. “It’s a great place, especially if you know how to turn a wrench and can do a few things with a car.”</p>
+  </div>
+
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+//set up for overall svg
+var margin = {top: 100, right: 30, bottom: 30, left: 25},
+      width = 900 - margin.left - margin.right,
+      height = 490 - margin.top - margin.bottom;
+
+//set up for left zoom graph
+var margin1 = {top: 50, right: 30, bottom: 0, left: 25},
+      width1 = 450 - margin1.left - margin1.right,
+      height1 = 325 - margin1.top - margin1.bottom;
+
+//set up for right zoom graph
+var margin2 = {top: 50, right: 30, bottom: 0, left: 50},
+      width2 = 120 - margin2.left - margin2.right,
+      height2 = 325 - margin2.top - margin2.bottom;
+
+//set up svg
+var svg = d3.select("#chart")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .call(responsivefy)
+  .append("g")
+    .attr("transform",
+            `translate(${margin.left}, ${margin.top})`);
+
+// title
+svg.append("text")
+    .attr("transform",
+          "translate("+ (margin.left/4) + " ," +
+                         (70) + ")")
+    .style("font", "24px 'Open Sans'")
+    .text("Clunkers and Cadillacs")
+    .style("font-weight", "700");
+
+// subtitle1
+svg.append("text")
+      .attr("transform",
+            "translate("+ (margin.left/4) + " ," +
+                           (100) + ")")
+      .style("font", "20px 'Open Sans'")
+      .text("More than 5,200 cars were put up for auction ");
+
+// subtitle2
+svg.append("text")
+      .attr("transform",
+            "translate("+ (margin.left/4) + " ," +
+                           (125) + ")")
+      .style("font", "20px 'Open Sans'")
+      .text("at the Kansas City Tow Lot in the last year, ");
+
+// subtitle3
+svg.append("text")
+      .attr("transform",
+            "translate("+ (margin.left/4) + " ," +
+                           (150) + ")")
+      .style("font", "20px 'Open Sans'")
+      .text("and the average model year was 2002.");
+
+//add svg border
+var borderPath = svg.append("rect")
+	.attr("x", -margin.left)
+	.attr("y", -margin.top)
+	.attr("height", height + margin.top + margin.bottom)
+	.attr("width", width + margin.left + margin.right)
+	.style("stroke", "#d3d3d3")
+	.style("fill", "none")
+	.style("stroke-width", 1);
+
+//add top box
+/*
+var topBox = svg.append("rect")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", 80)
+    .attr("transform",
+            "translate(" + (-1 * margin.left) + "," + (-1 * margin.top) + ")")
+    .style("fill","#97c4e5")
+    */
+
+
+//ZOOM SHAPES
+var svg2 = d3.select('svg')
+   .append('svg')
+   .attr('width', 500)
+   .attr('height', 500);
+
+var line = d3.line()
+   .x(function(d) {
+     return d.x;
+   })
+   .y(function(d) {
+     return d.y;
+   });
+
+var points = [{
+     x: 0, y: 276 //top left
+   },{
+     x: 395, y: 276 //top right
+   },{
+     x: 335, y: 330 //bottom right
+   },{
+     x: 60, y: 330 //bottom left
+   }];
+
+svg.append('path')
+ .attr("d", line(points) + 'Z')
+ .attr("fill", "url(#svgGradient)")
+ .style("stroke", "#b5b5b5")
+ .style("opacity", 0.3);
+
+var svg3 = d3.select('svg')
+  .append('svg')
+  .attr('width', 500)
+  .attr('height', 500);
+
+var line = d3.line()
+  .x(function(d) {
+    return d.x;
+  })
+  .y(function(d) {
+    return d.y;
+  });
+
+var points = [{
+    x: 765, y: 276 //top left
+  },{
+    x: 815, y: 276 //top right
+  },{
+    x: 807, y: 330 //bottom right
+  },{
+    x: 777, y: 330 //bottom left
+  }];
+
+svg.append('path')
+  .attr("d", line(points) + 'Z')
+  .attr("fill", "url(#svgGradient)")
+  .style("stroke", "#b5b5b5")
+  .style("opacity", 0.3);
+
+// define gradient
+var defs = svg.append("defs");
+
+var gradient = defs.append("linearGradient")
+ .attr("id", "svgGradient")
+ .attr("x1", "0%")
+ .attr("x2", "0%")
+ .attr("y1", "100%")
+ .attr("y2", "0%");
+
+gradient.append("stop")
+ .attr('class', 'start')
+ .attr("offset", "0%")
+ .attr("stop-color", "#f7f7f7")
+ .attr("stop-opacity", 1);
+
+gradient.append("stop")
+ .attr('class', 'end')
+ .attr("offset", "100%")
+ .attr("stop-color", "#b5b5b5")
+ .attr("stop-opacity", 1);
+
+// LEFT GRAPH
+//scales
+var x1 = d3.scaleLinear()
+    .rangeRound([0, width1])
+    .domain([1952, 1980]);
+
+//tooltip
+var tooltip = d3.select("body")
+  .append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+var dataFile = "carsleft.csv"
+
+//number of bins for histogram
+var nbins = 28;
+
+// Get the data
+d3.csv(dataFile, function(data) {
+  data.forEach(function(d) {
+      d.MakeModel = d.MakeModel
+      d.Year = +d.Year
+      d.Luxury = d.Luxury;
+  });
+
+  //histogram binning
+  var histogram = d3.histogram()
+    .domain(x1.domain())
+    .thresholds(x1.ticks(nbins))
+    .value(function(d) { return d.Year;} );
+
+  //binning data and filtering out empty bins
+  var bins = histogram(data).filter(d => d.length>0)
+
+  //g container for each bin
+  let binContainer = svg.selectAll(".gBin")
+    .data(bins);
+
+  let binContainerEnter = binContainer.enter()
+    .append("g")
+      .attr("class", "gBin")
+      .attr("transform", d => `translate(${x1(d.x0)}, ${height1})`)
+
+  //need to populate the bin containers with data
+  binContainerEnter.selectAll("rect")
+      .data(d => d.map((p, i) => {
+        return {idx: i,
+                name: p.MakeModel,
+                year: p.Year,
+                reason: p.Reason
+              }
+      }))
+    .enter()
+    .append("rect")
+      .attr("class", "enter")
+      .attr("x", 0) //g element already at correct x pos
+      .attr("y", function(d) {
+          return - d.idx * 12 - 12; })
+      .attr("width", 10)
+      .attr("height", 10)
+      .on("mouseover", tooltipOn)
+      .on("mouseout", tooltipOff)
+      .style("fill", "#355699");
+
+  binContainerEnter.merge(binContainer)
+      .attr("transform", d => `translate(${x1(d.x0)}, ${height1})`)
+
+});//d3.csv
+
+function tooltipOn(d) {
+  //x position of parent g element
+  let gParent = d3.select(this.parentElement)
+  let translateValue = gParent.attr("transform")
+
+  let gX = 180 //translateValue.split(",")[0].split("(")[1]
+  let gY = 55 // height + (+d3.select(this).attr("y")-100)
+
+  d3.select(this)
+    .classed("selected", true)
+    .style("fill","#f4aa42")
+  tooltip.transition()
+       .duration(200)
+       .style("opacity", 1);
+  tooltip.html(d.year + " " + d.name + " (" + d.reason + ")")
+    .style("left", gX + "px")
+    .style("top", gY + "px");
+}//tooltipOn
+
+function tooltipOff(d) {
+  d3.select(this)
+      .classed("selected", false)
+      .style("fill","#355699");
+    tooltip.transition()
+         .duration(500)
+         .style("opacity", 0);
+}//tooltipOff
+
+// add x axis
+svg.append("g")
+  .attr("class", "axis axis--x")
+  .attr("transform", "translate(0," + height1 + ")")
+  .call(d3.axisBottom(x1).tickFormat(d3.format("d")));
+
+//MIDDLE GRAPH
+var marginmid = {top: 25};
+
+var x = d3.scaleLinear()
+    .domain([1952, 2018])
+    .range([margin.left+35, width - (margin.right+8)]);
+
+var y = d3.scaleLinear()
+    .domain([0, 0.08])
+    .range([height - margin.bottom, marginmid.top]);
+
+// x axis
+svg.append("g")
+    .attr("class", "axis axis--x")
+    .attr("transform", "translate(0," + (height - margin.bottom) + ")")
+    .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+
+//svg2.append("g")
+    //.attr("class", "axis axis--y")
+    //.attr("transform", "translate(" + margin.left + ",0)")
+    //.call(d3.axisLeft(y).ticks(null, "%"));
+
+var dataFile = "allcars.csv"
+
+var nbins = 67; //number of bins for histogram
+
+d3.csv(dataFile, function(data) {
+  data.forEach(function(d) {
+      d.Year = +d.Year
+      d.MakeModel = d.MakeModel
+      d.Reason = d.Reason;
+  });
+
+  //histogram binning
+  var histogram = d3.histogram()
+    .domain(x.domain())
+    .thresholds(x.ticks(nbins))
+    .value(function(d) { return d.Year;} );
+
+  //binning data and filtering out empty bins
+  var bins = histogram(data).filter(d => d.length>0)
+
+  svg.insert("g", "*")
+      .attr("fill", "#355699")
+    .selectAll("rect")
+    .data(bins)
+    .enter().append("rect")
+      .attr("x", function(d) { return x(d.x0) + 1; })
+      .attr("y", function(d) { return y(d.length / data.length) - 2; })
+      .attr("width", function(d) { return x(d.x1) - x(d.x0) - 1; })
+      .attr("height", function(d) { return y(0) - y(d.length / data.length); });
+
+});
+
+//RIGHT GRAPH
+var x2 = d3.scaleLinear()
+    .rangeRound([0, width2])
+    .domain([2015, 2018]);
+
+//tooltip
+var tooltip2 = d3.select("body")
+  .append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+var dataFile2 = "carsright.csv"
+
+//number of bins for histogram
+var nbins2 = 3;
+
+d3.csv(dataFile2, function(data2) {
+  data2.forEach(function(d) {
+      d.MakeModel = d.MakeModel
+      d.Year = +d.Year
+      d.Luxury = d.Luxury;
+  });
+
+  //histogram binning
+  var histogram2 = d3.histogram()
+    .domain(x2.domain())
+    .thresholds(x2.ticks(nbins2))
+    .value(function(d) { return d.Year;} );
+
+  //binning data and filtering out empty bins
+  var bins2 = histogram2(data2).filter(d => d.length>0)
+
+  //g container for each bin
+  let binContainer2 = svg.selectAll(".gBin.right")
+    .data(bins2);
+
+  let binContainerEnter2 = binContainer2.enter()
+    .append("g")
+      .attr("class", "gBin")
+      .attr("class", "right")
+      .attr("transform", d => `translate(${x2(d.x0)}, ${height2})`)
+
+  //need to populate the bin containers with data
+  binContainerEnter2.selectAll("rect.right")
+      .data(d => d.map((p, i) => {
+        return {idx: i,
+                name: p.MakeModel,
+                year: p.Year,
+                reason: p.Reason
+              }
+      }))
+    .enter()
+    .append("rect")
+      .attr("class", "enter")
+      .attr("class", "right")
+      .attr("x", 0) //g element already at correct x pos
+      .attr("y", function(d) {
+          return - d.idx * 12 - 12; })
+      //.attr("r", function(d) {
+      //return (d.length==0) ? 0 : d.radius; })
+      .attr("width", 10)
+      .attr("height", 10)
+      .on("mouseover", tooltipOn2)
+      .on("mouseout", tooltipOff2)
+      .style("fill", "#355699");
+
+  binContainerEnter2.merge(binContainer2)
+      .attr("transform", d => `translate(${x2(d.x0)+765}, ${height2})`)
+
+});//d3.csv
+
+function tooltipOn2(d) {
+  //x position of parent g element
+  let gParent = d3.select(this.parentElement)
+  let translateValue = gParent.attr("transform")
+
+  let gX = 180 //translateValue.split(",")[0].split("(")[1]
+  let gY = 55 // height + (+d3.select(this).attr("y")-100)
+
+  d3.select(this)
+    .classed("selected", true)
+    .style("fill","#f4aa42")
+  tooltip.transition()
+       .duration(200)
+       .style("opacity", 1);
+  tooltip.html(d.year + " " + d.name + " (" + d.reason + ")")
+    .style("left", gX + "px")
+    .style("top", gY + "px");
+}//tooltipOn
+
+function tooltipOff2(d) {
+  d3.select(this)
+      .classed("selected", false)
+      .style("fill","#355699");
+    tooltip.transition()
+         .duration(500)
+         .style("opacity", 0);
+}//tooltipOff
+
+// add x axis
+svg.append("g")
+  .attr("class", "axis axis--x")
+  .attr("transform", "translate(765," + (height2 - margin2.bottom) + ")")
+  .call(d3.axisBottom(x2).tickFormat(d3.format("d")).ticks(1));
+
+  // RESPONSIVE
+  function responsivefy(svg) {
+  // get container + svg aspect ratio
+    var container = d3.select(svg.node().parentNode),
+        width = parseInt(svg.style("width")),
+        height = parseInt(svg.style("height")),
+        aspect = width / height;
+
+    // add viewBox and preserveAspectRatio properties,
+    // and call resize so that svg resizes on inital page load
+    svg.attr("viewBox", "0 0 " + width + " " + height)
+        .attr("perserveAspectRatio", "xMinYMid")
+        .call(resize);
+
+    // to register multiple listeners for same event type,
+    // you need to add namespace, i.e., 'click.foo'
+    // necessary if you call invoke this function for multiple svgs
+    // api docs: https://github.com/mbostock/d3/wiki/Selections#on
+    d3.select(window).on("resize." + container.attr("id"), resize);
+
+    // get width of container and resize svg to fit it
+    function resize() {
+        var targetWidth = parseInt(container.style("width"));
+        svg.attr("width", targetWidth);
+        svg.attr("height", Math.round(targetWidth / aspect));
+    }
+  }
+
+
+
+// thanks to these resources for help:
+// https://bl.ocks.org/mbostock/4341954
+// http://bl.ocks.org/AndrewStaroscik/5222370
+// https://bl.ocks.org/gcalmettes/95e3553da26ec90fd0a2890a678f3f69
+// https://stackoverflow.com/questions/33735487/create-trapezoid-using-d3-svg-area
+
+</script>
+
+</body>
+</html>
